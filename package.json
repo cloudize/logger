@@ -12,7 +12,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@apigames/json": "^1.0.27"
+    "@apigames/json": "^1.0.28"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",

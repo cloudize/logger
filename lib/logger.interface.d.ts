@@ -6,6 +6,6 @@ export declare enum LoggerMessageType {
     Debug = 3
 }
 export declare type LoggerPayload = JsonObject | undefined;
-export interface ILogger {
+export interface Logger {
     write(type: LoggerMessageType, message: string, payload?: LoggerPayload): void;
 }
