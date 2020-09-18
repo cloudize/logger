@@ -1,4 +1,4 @@
-const { ConsoleLogger, LoggerMessageType } = require('../../../lib');
+import { ConsoleLogger, LoggerMessageType } from '../../../src';
 
 describe('The Console Logger', () => {
   it('should write an Error to the console when called', () => {

@@ -1,6 +1,6 @@
-import { ConsoleLogger, LoggerMessageType } from '../../src';
+const { ConsoleLogger, LoggerMessageType } = require('../../../../lib');
 
-describe('The Console Logger', () => {
+describe('The Console ILogger', () => {
   it('should write an Error to the console when called', () => {
     global.console.log = jest.fn();
 
