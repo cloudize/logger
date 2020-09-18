@@ -1,4 +1,4 @@
-import { JsonObject } from '@apigames/json';
+import { IJsonObject } from '@apigames/json';
 
 export enum LoggerMessageType {
   Error = 'Error',
@@ -7,7 +7,7 @@ export enum LoggerMessageType {
   Debug = 'Debug',
 }
 
-export type LoggerPayload = JsonObject | undefined;
+export type LoggerPayload = IJsonObject | undefined;
 
 export interface ILogger {
   write(type: LoggerMessageType, message: string, payload?: LoggerPayload): void;
