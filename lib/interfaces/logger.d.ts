@@ -6,5 +6,5 @@ export declare enum LoggerMessageType {
 }
 export declare type LoggerPayload = any;
 export interface ILogger {
-    write(type: LoggerMessageType, message: string, payload?: LoggerPayload): void;
+    write(type: LoggerMessageType, message: string, payload?: LoggerPayload): Promise<void>;
 }

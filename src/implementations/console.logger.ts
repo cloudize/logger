@@ -3,7 +3,7 @@ import { ILogger, LoggerMessageType, LoggerPayload } from '../interfaces/logger'
 
 // eslint-disable-next-line import/prefer-default-export
 const ConsoleLogger: ILogger = class {
-  static write = (type: LoggerMessageType, message: string, payload?: LoggerPayload): void => {
+  static write = async (type: LoggerMessageType, message: string, payload?: LoggerPayload): Promise<void> => {
     // eslint-disable-next-line no-console
     console.log(`${type}: ${message}`);
 
