@@ -1,4 +1,4 @@
-import { isEmpty, stringify } from '@apigames/json';
+import { isEmpty } from '@apigames/json';
 import { ILogger, LoggerMessageType, LoggerPayload } from '../interfaces/logger';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -17,7 +17,7 @@ const ConsoleLogger: ILogger = class {
 
     if (!isEmpty(payload)) {
       // eslint-disable-next-line no-console
-      console.log(stringify(payload));
+      console.log(`${messageDate.toISOString()} PAYLOAD ${JSON.stringify(payload)}`);
     }
   }
 };
