@@ -1,2 +1,2 @@
 export { LoggerMessageType, LoggerPayload, ILogger } from './interfaces/logger';
-export { ConsoleLogger } from './implementations';
+export { DebugConsoleLogger, ProductionConsoleLogger } from './implementations';

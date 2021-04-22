@@ -1,4 +1,4 @@
-import { ConsoleLogger, LoggerMessageType } from '../../../src';
+import { DebugConsoleLogger, LoggerMessageType } from '../../../../lib';
 
 const messageDate = new Date();
 
@@ -6,7 +6,7 @@ describe('The Console Logger', () => {
   it('should Write an Error to the console when called', async () => {
     global.console.log = jest.fn();
 
-    await ConsoleLogger.Write(LoggerMessageType.Error, 'Test message', undefined, messageDate);
+    await DebugConsoleLogger.Write(LoggerMessageType.Error, 'Test message', undefined, messageDate);
     expect(global.console.log).toHaveBeenCalledTimes(1);
     expect(global.console.log).toHaveBeenCalledWith(`${messageDate.toISOString()} ERROR   Test message`);
   });
@@ -17,7 +17,7 @@ describe('The Console Logger', () => {
     const payload = { name: 'value', number: 123 };
     const serializedPayload = '{"name":"value","number":123}';
 
-    await ConsoleLogger.Write(LoggerMessageType.Error, 'Test message', payload, messageDate);
+    await DebugConsoleLogger.Write(LoggerMessageType.Error, 'Test message', payload, messageDate);
     expect(global.console.log).toHaveBeenCalledTimes(2);
     expect(global.console.log).toHaveBeenNthCalledWith(1, `${messageDate.toISOString()} ERROR   Test message`);
     expect(global.console.log).toHaveBeenNthCalledWith(2, `${messageDate.toISOString()} PAYLOAD ${serializedPayload}`);
@@ -26,7 +26,7 @@ describe('The Console Logger', () => {
   it('should Write an Warning to the console when called', async () => {
     global.console.log = jest.fn();
 
-    await ConsoleLogger.Write(LoggerMessageType.Warning, 'Test message', undefined, messageDate);
+    await DebugConsoleLogger.Write(LoggerMessageType.Warning, 'Test message', undefined, messageDate);
     expect(global.console.log).toHaveBeenCalledTimes(1);
     expect(global.console.log).toHaveBeenCalledWith(`${messageDate.toISOString()} WARNING Test message`);
   });
@@ -37,7 +37,7 @@ describe('The Console Logger', () => {
     const payload = { name: 'value', number: 123 };
     const serializedPayload = '{"name":"value","number":123}';
 
-    await ConsoleLogger.Write(LoggerMessageType.Warning, 'Test message', payload, messageDate);
+    await DebugConsoleLogger.Write(LoggerMessageType.Warning, 'Test message', payload, messageDate);
     expect(global.console.log).toHaveBeenCalledTimes(2);
     expect(global.console.log).toHaveBeenNthCalledWith(1, `${messageDate.toISOString()} WARNING Test message`);
     expect(global.console.log).toHaveBeenNthCalledWith(2, `${messageDate.toISOString()} PAYLOAD ${serializedPayload}`);
@@ -46,7 +46,7 @@ describe('The Console Logger', () => {
   it('should Write an Info to the console when called', async () => {
     global.console.log = jest.fn();
 
-    await ConsoleLogger.Write(LoggerMessageType.Info, 'Test message', undefined, messageDate);
+    await DebugConsoleLogger.Write(LoggerMessageType.Info, 'Test message', undefined, messageDate);
     expect(global.console.log).toHaveBeenCalledTimes(1);
     expect(global.console.log).toHaveBeenCalledWith(`${messageDate.toISOString()} INFO    Test message`);
   });
@@ -57,7 +57,7 @@ describe('The Console Logger', () => {
     const payload = { name: 'value', number: 123 };
     const serializedPayload = '{"name":"value","number":123}';
 
-    await ConsoleLogger.Write(LoggerMessageType.Info, 'Test message', payload, messageDate);
+    await DebugConsoleLogger.Write(LoggerMessageType.Info, 'Test message', payload, messageDate);
     expect(global.console.log).toHaveBeenCalledTimes(2);
     expect(global.console.log).toHaveBeenNthCalledWith(1, `${messageDate.toISOString()} INFO    Test message`);
     expect(global.console.log).toHaveBeenNthCalledWith(2, `${messageDate.toISOString()} PAYLOAD ${serializedPayload}`);
@@ -66,7 +66,7 @@ describe('The Console Logger', () => {
   it('should Write an Debug to the console when called', async () => {
     global.console.log = jest.fn();
 
-    await ConsoleLogger.Write(LoggerMessageType.Debug, 'Test message', undefined, messageDate);
+    await DebugConsoleLogger.Write(LoggerMessageType.Debug, 'Test message', undefined, messageDate);
     expect(global.console.log).toHaveBeenCalledTimes(1);
     expect(global.console.log).toHaveBeenCalledWith(`${messageDate.toISOString()} DEBUG   Test message`);
   });
@@ -77,7 +77,7 @@ describe('The Console Logger', () => {
     const payload = { name: 'value', number: 123 };
     const serializedPayload = '{"name":"value","number":123}';
 
-    await ConsoleLogger.Write(LoggerMessageType.Debug, 'Test message', payload, messageDate);
+    await DebugConsoleLogger.Write(LoggerMessageType.Debug, 'Test message', payload, messageDate);
     expect(global.console.log).toHaveBeenCalledTimes(2);
     expect(global.console.log).toHaveBeenNthCalledWith(1, `${messageDate.toISOString()} DEBUG   Test message`);
     expect(global.console.log).toHaveBeenNthCalledWith(2, `${messageDate.toISOString()} PAYLOAD ${serializedPayload}`);

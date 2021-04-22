@@ -2,7 +2,7 @@ import { isEmpty } from '@apigames/json';
 import { ILogger, LoggerMessageType, LoggerPayload } from '../interfaces/logger';
 
 // eslint-disable-next-line import/prefer-default-export
-const ConsoleLogger: ILogger = class {
+const DebugConsoleLogger: ILogger = class {
   static Write = async (type: LoggerMessageType, message: string, payload?: LoggerPayload, date?: Date): Promise<void> => {
     let messageDate = date;
     if (!messageDate) {
@@ -22,4 +22,4 @@ const ConsoleLogger: ILogger = class {
   }
 };
 
-export default ConsoleLogger;
+export default DebugConsoleLogger;
