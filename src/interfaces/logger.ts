@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-shadow
 export enum LoggerMessageType {
   Error = 'Error',
   Warning = 'Warning',

@@ -11,6 +11,13 @@ describe('The Console Logger', () => {
     expect(global.console.log).toHaveBeenCalledWith(`${messageDate.toISOString()} ERROR   Test message`);
   });
 
+  it('should Write an Error to the console when called without a date', async () => {
+    global.console.log = jest.fn();
+
+    await DebugConsoleLogger.Write(LoggerMessageType.Error, 'Test message');
+    expect(global.console.log).toHaveBeenCalledTimes(1);
+  });
+
   it('should Write an Error with a payload to the console when called', async () => {
     global.console.log = jest.fn();
 

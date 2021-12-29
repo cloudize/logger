@@ -19,7 +19,7 @@ const DebugConsoleLogger: ILogger = class {
       // eslint-disable-next-line no-console
       console.log(`${messageDate.toISOString()} PAYLOAD ${JSON.stringify(payload)}`);
     }
-  }
+  };
 };
 
 export default DebugConsoleLogger;

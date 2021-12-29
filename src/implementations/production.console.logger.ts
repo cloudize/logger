@@ -21,7 +21,7 @@ const ProductionConsoleLogger: ILogger = class {
         console.log(`${messageDate.toISOString()} PAYLOAD [${JSON.stringify(payload).length} bytes]`);
       }
     }
-  }
+  };
 };
 
 export default ProductionConsoleLogger;
