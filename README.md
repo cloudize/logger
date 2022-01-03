@@ -1,7 +1,8 @@
 # API Games Logger
 
 ![](https://img.shields.io/badge/build-passing-brightgreen)
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/fa4dd93a35e942c9bc639890ca9c18cb)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=apigames-private/logger&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/fa4dd93a35e942c9bc639890ca9c18cb)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=apigames-private/logger&utm_campaign=Badge_Coverage)
 ![](https://img.shields.io/badge/license-UNLICENSED-blue)
 
 This package includes the base logger interface and a console logging implementation of that interface for the API Games Platform.
