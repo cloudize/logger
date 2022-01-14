@@ -3,7 +3,7 @@
   "author": "API Games Limited",
   "description": "API Games Logger",
   "license": "UNLICENSED",
-  "version": "22.1.0-dev.8",
+  "version": "22.1.0-dev.9",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
