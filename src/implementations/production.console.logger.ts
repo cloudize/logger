@@ -1,4 +1,4 @@
-import { isEmpty } from '@apigames/json';
+import { isDefined, isEmpty, isError } from '@apigames/json';
 import { ILogger, LoggerMessageType, LoggerPayload } from '../interfaces/logger';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -16,9 +16,12 @@ const ProductionConsoleLogger: ILogger = class {
       // eslint-disable-next-line no-console
       console.log(`${messageDate.toISOString()} ${typeStr.toUpperCase()} ${message}`);
 
-      if (!isEmpty(payload)) {
+      if (isDefined(payload)) {
+        let payloadObject = payload;
+        if (isError(payload)) payloadObject = { name: payload.name, message: payload.message };
+
         // eslint-disable-next-line no-console
-        console.log(`${messageDate.toISOString()} PAYLOAD [${JSON.stringify(payload).length} bytes]`);
+        console.log(`${messageDate.toISOString()} PAYLOAD ${JSON.stringify(payloadObject)}`);
       }
     }
   };
