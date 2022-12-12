@@ -24,4 +24,4 @@ $ npm i @apigames/logger
 
 ## License
 
-Copyright (c) 2022 Cloudize Limited.  All rights reserved.
+Copyright (c) 2023 Cloudize Limited.  All rights reserved.
