@@ -13,7 +13,7 @@
   ],
   "description": "API Games Logger",
   "license": "MIT",
-  "version": "23.1.5",
+  "version": "23.1.6",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -33,7 +33,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@apigames/json": "23.1.5"
+    "@apigames/json": "23.1.6"
   },
   "devDependencies": {
     "@types/jest": "29.5.0",
