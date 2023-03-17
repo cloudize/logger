@@ -1,5 +1,5 @@
 {
-  "name": "@apigames/logger",
+  "name": "@cloudize/logger",
   "author": {
     "name" : "Cloudize Limited",
     "email" : "hello@cloudize.net",
@@ -11,7 +11,7 @@
       "email" : "erich.kuba@cloudize.net"
     }
   ],
-  "description": "API Games Logger",
+  "description": "Cloudize Logger",
   "license": "MIT",
   "version": "23.1.6",
   "main": "lib/index.js",
@@ -33,7 +33,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@apigames/json": "23.1.6"
+    "@cloudize/json": "23.1.6"
   },
   "devDependencies": {
     "@types/jest": "29.5.0",
@@ -53,10 +53,10 @@
   "eslintConfig": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apigames-core/logger.git"
+    "url": "git+https://github.com/cloudize/logger.git"
   },
   "bugs": {
-    "url": "https://github.com/apigames-core/logger/issues"
+    "url": "https://github.com/cloudize/logger/issues"
   },
-  "homepage": "https://github.com/apigames-core/logger#readme"
+  "homepage": "https://github.com/cloudize/logger#readme"
 }

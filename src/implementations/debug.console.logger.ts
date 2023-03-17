@@ -1,4 +1,4 @@
-import { isDefined, isError } from '@apigames/json';
+import { isDefined, isError } from '@cloudize/json';
 import { ILogger, LoggerMessageType, LoggerPayload } from '../interfaces/logger';
 
 // eslint-disable-next-line import/prefer-default-export
